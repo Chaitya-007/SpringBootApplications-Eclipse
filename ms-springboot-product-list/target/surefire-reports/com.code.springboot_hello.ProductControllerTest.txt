@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.code.springboot_hello.ProductControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.75 s <<< FAILURE! -- in com.code.springboot_hello.ProductControllerTest
+com.code.springboot_hello.ProductControllerTest.testProductById -- Time elapsed: 0.052 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.pName"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:302)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:73)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:87)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.code.springboot_hello.ProductControllerTest.testProductById(ProductControllerTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['pName']
+
